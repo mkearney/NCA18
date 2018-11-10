@@ -12,8 +12,11 @@ To download the Twitter data, use the following code:
 if (!requireNamespace("rtweet", quietly = TRUE)) {
   install.packages("rtweet")
 }
+
 ## read status IDs
-sids <- rtweet::read_twitter_csv("status_id.csv")
+sids <- rtweet::read_twitter_csv(
+  "https://raw.githubusercontent.com/mkearney/NCA18/master/status_id.csv"
+)
 
 ## lookup full tweets dat
 d <- rtweet::lookup_tweets(sids$status_id)
