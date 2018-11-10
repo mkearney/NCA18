@@ -9,7 +9,7 @@ To download the Twitter data, use the following code:
 
 ``` r
 ## install rtweet if not already
-if (requireNamespace(!"rtweet", quietly = TRUE)) {
+if (!requireNamespace("rtweet", quietly = TRUE)) {
   install.packages("rtweet")
 }
 ## read status IDs
