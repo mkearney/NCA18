@@ -22,38 +22,50 @@ sids <- rtweet::read_twitter_csv(
 d <- rtweet::lookup_tweets(sids$status_id)
 ```
 
-### Status frequency
+Frequency of \#NCA18 tweets:
 
-Frequency of NCA tweets.
+<p style="align=center">
 
-![](nca18-ts.png)
+<img src="nca18-ts.png">
 
-### Top tweeters
+</p>
 
-Accounts that have posted the most statuses.
+Most active accounts:
 
-![](nca18-usrs.png)
+<p style="align=center">
 
-### Top mentions
+<img src="nca18-usrs.png">
 
-Accounts most frequently mentioned.
+</p>
 
-![](nca18-ats.png)
+Most frequently mentioned:
 
-### Sentiment analysis
+<p style="align=center">
 
-Sentiment (positive/negative) of statuses over time.
+<img src="nca18-ats.png">
 
-![](nca18-sa.png)
+</p>
 
-### Network analysis
+Sentiment (positive/negative) of tweets:
 
-Semantic (quotes, retweets, and mentions) network connections.
+<p style="align=center">
 
-![](nca18-network.png)
+<img src="nca18-sa.png">
 
-### Word cloud
+</p>
 
-Most popular words appearing in statuses (stop words excluded).
+Semantic (quotes, retweets, and mentions) network:
 
-![](nca18-wc.png)
+<p style="align=center">
+
+<img src="nca18-network.png">
+
+</p>
+
+Word cloud:
+
+<p style="align=center">
+
+<img src="nca18-wc.png">
+
+</p>
