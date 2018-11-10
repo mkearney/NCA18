@@ -20,3 +20,5 @@ nca <- filter(nca, !duplicated(status_id))
 ## save dat
 saveRDS(nca, "data/nca18.rds")
 
+## save IDs
+save_as_csv(select(nca, status_id), "status_id.csv")

@@ -52,7 +52,8 @@ nca %>%
   theme(legend.position = "none") +
   scale_fill_manual(values = c(Positive = "#2244ee", Negative = "#dd2222")) +
   scale_colour_manual(values = c(Positive = "#0022cc", Negative = "#bb0000")) +
+  scale_x_datetime(labels = format_xdate, breaks = "days") +
   labs(x = NULL, y = NULL,
        title = "Sentiment of #NCA18 tweets by hour",
        subtitle = "Mean positive/negative sentiment scores of tweets") +
-  ggsave("../nca18-sa.png", width = 8, height = 7, units = "in")
+  ggsave("nca18-sa.png", width = 8, height = 7, units = "in")

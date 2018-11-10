@@ -28,7 +28,7 @@ tab_sort <- function (x, n = 10, mentions = FALSE) {
 
 ## function for cleaning text and creating word freq table
 clean_text_table <- function(data) {
-  txt <- tolower(plain_tweets(data$text))
+  txt <- tolower(textfeatures:::text_cleaner(data$text))
   txt <- gsub("&amp;", "", txt)
   txt <- gsub("#nca17", "", txt, ignore.case = TRUE)
   txt <- unlist(strsplit(txt, " "))
@@ -57,7 +57,9 @@ nca %>%
 usrs <- tab_sort(nca$screen_name)
 png("nca18-usrs.png", height = 3.1, width = 4.25, "in", res = 300)
 par(bg = "white")
-gridExtra::grid.table(usrs, theme = gridExtra::ttheme_default(base_size = 9))
+gridExtra::grid.table(usrs,
+  theme = gridExtra::ttheme_default(base_size = 9,
+    base_family = "Avenir Next LT Pro"))
 dev.off()
 
 ## most frequent mentions table
@@ -65,11 +67,14 @@ naomit <- function(x) x[!is.na(x)]
 usrs <- tab_sort(naomit(unlist(nca$mentions_screen_name)), mentions = TRUE)
 png("nca18-ats.png", height = 3.1, width = 4.25, "in", res = 300)
 par(bg = "white")
-gridExtra::grid.table(usrs, theme = gridExtra::ttheme_default(base_size = 9))
+gridExtra::grid.table(usrs,
+  theme = gridExtra::ttheme_default(base_size = 9,
+    base_family = "Avenir Next LT Pro"))
 dev.off()
 
 ## create frequency table for popular words
-wds <- table(unlist(tokenizers::tokenize_tweets(nca$text,
+wds <- table(unlist(tokenizers::tokenize_tweets(
+  textfeatures:::text_cleaner(nca$text),
   stopwords = stopwordslangs$word[stopwordslangs$p > .999])))
 minfreq <- quantile(as.double(wds), .9)
 
