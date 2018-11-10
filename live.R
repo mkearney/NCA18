@@ -1,13 +1,6 @@
 ## load packages
 library(rtweet)
 
-## install and load ggplot
-if (!requireNamespace("ggplot2", quietly = TRUE)) install.packages("ggplot2")
-library(ggplot2)
-
-## install gridExtra
-if (!requireNamespace("gridExtra", quietly = TRUE)) install.packages("gridExtra")
-
 ## table output function
 tab_sort <- function (x, n = 10, mentions = FALSE) {
   sumrow <- data.frame(
