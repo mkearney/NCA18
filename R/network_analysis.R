@@ -125,7 +125,7 @@ net <- graph_from_data_frame(
 )
 
 ## save plot
-png("nca18-network.png", 20, 18, "in", res = 300)
+png("nca18-network.png", 16, 14, "in", res = 300)
 par(mar = c(0, 0, 0, 0), bg = "#000044", family = "Avenir Next LT Pro")
 plot(net, edge.size = .25,
      margin = c(-.05, -.05, -.05, -.05),

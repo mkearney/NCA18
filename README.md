@@ -22,15 +22,11 @@ sids <- rtweet::read_twitter_csv(
 d <- rtweet::lookup_tweets(sids$status_id)
 ```
 
-Frequency of \#NCA18 tweets:
-
 <p style="align=center">
 
 <img src="nca18-ts.png">
 
 </p>
-
-Most active accounts:
 
 <p style="align=center">
 
@@ -38,15 +34,11 @@ Most active accounts:
 
 </p>
 
-Most frequently mentioned:
-
 <p style="align=center">
 
 <img src="nca18-ats.png">
 
 </p>
-
-Sentiment (positive/negative) of tweets:
 
 <p style="align=center">
 
@@ -54,15 +46,11 @@ Sentiment (positive/negative) of tweets:
 
 </p>
 
-Semantic (quotes, retweets, and mentions) network:
-
 <p style="align=center">
 
 <img src="nca18-network.png">
 
 </p>
-
-Word cloud:
 
 <p style="align=center">
 
